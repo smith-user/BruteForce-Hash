@@ -1,0 +1,10 @@
+"aba" -> "abababacaba":
+	Success! '0 2 4 8'
+"baa" -> "abababacaba":
+	Success! '-1'
+"l" -> "Hello, world":
+	Success! '2 3 10'
+"abra" -> "abrakadabra":
+	Success! '0 7'
+"ab" -> "aaaaaaaaaab":
+	Success! '9'
