@@ -11,12 +11,9 @@ String.prototype.substringSearch = function (substr, parametr = 'RabinKarp', tes
 			result = goodHash(this, substr, test);
 			break;
 		default:
-			throw new Error(`Invalid comman: ${parametr}`)
+			throw new Error(`Invalid command: ${parametr}`)
 	}
-	if (result.length != 0)
-		return result;
-	else
-		return [-1];	
+	return result;	
 }
 
 function alogorythmRabinKarp(input, substr, test) {	

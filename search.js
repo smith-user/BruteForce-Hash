@@ -6,7 +6,8 @@ let data;
 try {
 	data = fs.readFileSync(arg[3]);
 } catch (err) {
-	console.err(err);
+	console.error(err);
+	return;
 }
 data = data.toString();
 
@@ -14,13 +15,14 @@ let substring;
 try {
 	substring = fs.readFileSync(arg[2]);
 } catch (err) {
-	console.err(err);
+	console.error(err);
+	return;
 }
 substring = substring.toString();
 if (substring.charAt(substring.length - 1) == '\n')
 	substring = substring.substring(0, substring.length - 1);
 
-console.log(`Search "${substring}"(${arg[2]}) in "${arg[3]}"`)
+console.log(`Search "${substring.substring(0,20)}"${substring.length > 20 ? '...' : ''}(${arg[2]}) in "${arg[3]}"`);
 let result = data.substringSearch(substring.toString());
 
 console.log(`MATCH: ${result.length}`);
