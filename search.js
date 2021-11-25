@@ -22,12 +22,10 @@ if (substring.charAt(substring.length - 1) == '\n')
 
 console.log(`Search "${substring}"(${arg[2]}) in "${arg[3]}"`)
 let result = data.substringSearch(substring.toString());
-if (result[0] == -1)
-	console.log('MATCH: 0')
-else {
-	console.log(`MATCH: ${result.length}`)
+
+console.log(`MATCH: ${result.length}`);
+if (result.length != 0)
 	printResult(result);
-}
 mesureTime(data, substring);
 
 function mesureTime(input, substr) {
